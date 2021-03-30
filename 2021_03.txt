@@ -1,0 +1,172 @@
+
+
+----------==========----------==========----------==========----------
+
+
+"Eat Your Own Catfood."
+
+
+----------==========----------==========----------==========----------
+
+
+Change Log
+
+
+2021/03/30
+
+
+BUGFIX
+
+
+	neutral/bmp/color.c
+		n_bmp_composite_pixel_*() : cache mechanism
+			OLD : buggy
+			NEW : removed
+			[x] : NEW_FEATURE @ 2021/02/28
+	neutral/bmp/filter.c
+		n_bmp_blendcopy_thread_main() : cache mechanism
+			OLD : buggy
+			NEW : fixed
+			[x] : NEW_FEATURE @ 2021/02/28
+
+	win32/win_txtbox.c
+		IME
+			OLD : scrollable
+			NEW : stop scrolling while composit
+
+
+NEW_FEATURE
+
+
+	all
+		sample code
+			OLD : compile error
+			NEW : fixed
+
+	neutral/posix.c
+		n_posix_bool/_true/_false
+			NEW : name-spaced symbols
+	neutral/type.c
+		bool/true/false
+			NEW : removed
+			[!] : for scalability
+
+	project/macro.c
+		n_bool/n_true/n_false
+			NEW : safer symbols
+
+	win32/gdi/text.c
+		N_GDI_TEXT_NO_MARGIN
+			NEW : no margin for OrangeCat
+
+	LINE MASHER 2
+		background
+			NEW : moving stars available
+		frame-per-second
+			OLD : 30fps
+			NEW : 60fps
+			[!] : smoother than older
+	OrangeCat
+		Item View
+			NEW : more characters will be visible
+
+
+----------==========----------==========----------==========----------
+
+
+Change Log
+
+
+2021/03/20
+
+
+BUGFIX
+
+
+	win32/win_calendar.c
+		WM_PRINTCLIENT
+			OLD : position and size will be all parent window
+			NEW : fixed
+
+	Nonnon Paint
+		Multi-Layer : Grabber : Filters : frame
+			OLD : not sync
+			NEW : fixed
+		Thumbnail : Grabber frame
+			OLD : not redrawn when finished
+			NEW : fixed
+		Thumbnail : position
+			OLD : zero sometimes
+			NEW : fixed
+			[!] : when invisible and tool window is moved
+
+
+NEW_FEATURE
+
+
+	nmemo
+		window #1
+			NEW : no small icon available
+		window #2 : DWM is ON
+			NEW : tool window
+			[!] : feels like old Windows
+	nmixer
+		border emulation
+			NEW : more similar than older
+	Nonnon Calendar
+		border emulation
+			NEW : like nmixer
+
+
+----------==========----------==========----------==========----------
+
+
+Change Log
+
+
+2021/03/10
+
+
+BUGFIX
+
+
+	win32/win_txtbox/19_edit.c
+		n_win_txtbox_edit_copy()
+			OLD : accent is not copied
+			NEW : fixed
+	win32/win_txtbox/24_subclass.c
+		function keys
+			OLD : inputtable
+			NEW : ignored
+	win32/win_calendar.c
+		control type
+			OLD : button ownerdraw
+			NEW:  static ownerdraw
+			[?] : for WM_PRINTCLIENT
+			[!] : usage is same
+
+	nmixer
+		classic
+			OLD : possibility of misbehave when failed
+			NEW : fixed
+
+
+NEW_FEATURE
+
+
+	Calendar
+		UI : Non-AeroGlass
+			NEW : animate window available
+	CatPad
+		key bindings : F11 : MS IME Japanese
+			NEW : privacy protection available
+			[!] : delete a file called "JpnIHDS.dat"
+			[!] : auto-suggestion data will be deleted
+	Nonnon Paint
+		Thumbnail
+			NEW : child window based brand-new version available
+			[!] : default will be OFF
+
+
+----------==========----------==========----------==========----------
+
